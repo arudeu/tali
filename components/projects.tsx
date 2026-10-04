@@ -19,7 +19,7 @@ export function Projects() {
           {projects.map((p, i) => {
             const body = (
               <>
-                <div className="overflow-hidden rounded-2xl border border-ink/80 bg-card shadow-[5px_5px_0_0_#FA8112] transition-shadow sm:shadow-[8px_8px_0_0_#FA8112] sm:group-hover:shadow-[12px_12px_0_0_#FA8112]">
+                <div className="overflow-hidden rounded-2xl border border-ink/80 bg-card shadow-[5px_5px_0_0_#F62440] transition-shadow sm:shadow-[8px_8px_0_0_#F62440] sm:group-hover:shadow-[12px_12px_0_0_#F62440]">
                   <div className="flex min-w-0 items-center gap-1.5 border-b border-ink/80 bg-sand px-4 py-2.5" aria-hidden>
                     <span className="h-2.5 w-2.5 rounded-full bg-ink" />
                     <span className="h-2.5 w-2.5 rounded-full bg-accent" />

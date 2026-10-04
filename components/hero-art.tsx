@@ -3,6 +3,7 @@ import { useEffect, type ReactNode } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import { Gift, Heart, Mail, MapPin, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { BAR, STEM } from "@/lib/string";
 
 function Float({ children, className, delay = 0 }: { children: ReactNode; className?: string; delay?: number }) {
   return (
@@ -40,11 +41,11 @@ export function HeroArt() {
       <motion.div className="relative h-full w-full" style={{ rotateX, rotateY }}
         initial={{ opacity: 0, y: 60 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 3.4, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}>
         <div className="flex h-full flex-col items-center rounded-[2.5rem] border-[8px] border-ink bg-cream px-6 pt-14 text-center shadow-2xl">
-          <svg width="120" height="60" viewBox="0 0 120 60" fill="none" aria-hidden>
-            <motion.circle cx="46" cy="30" r="22" stroke="#222222" strokeWidth="5" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ delay: 4, duration: 1.2 }} />
-            <motion.circle cx="74" cy="30" r="22" stroke="#FA8112" strokeWidth="5" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ delay: 4.5, duration: 1.2 }} />
+          <svg width="90" height="90" viewBox="0 0 100 100" fill="none" aria-hidden>
+            <motion.path d={STEM} stroke="#F62440" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ delay: 4, duration: 1.2 }} />
+            <motion.path d={BAR} stroke="#F62440" strokeWidth="7" strokeLinecap="round" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ delay: 5.1, duration: 0.7 }} />
           </svg>
-          <p className="mt-6 text-sm font-semibold text-muted-foreground">You are invited</p>
+          <p className="mt-4 text-sm font-semibold text-muted-foreground">You are invited</p>
           <p className="mt-2 text-4xl font-extrabold leading-tight tracking-tight">Anna<br />&amp; Ben</p>
           <div className="my-5 h-px w-16 bg-accent" />
           <p className="text-sm font-semibold">November 28, 10:30 AM</p>

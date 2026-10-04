@@ -2,9 +2,8 @@ const items = ["Save the date", "RSVP online", "Love story", "Photo gallery", "C
 
 function Ring() {
   return (
-    <svg aria-hidden width="36" height="18" viewBox="0 0 120 60" fill="none" className="shrink-0">
-      <circle cx="46" cy="30" r="22" stroke="#222222" strokeWidth="8" />
-      <circle cx="74" cy="30" r="22" stroke="#FA8112" strokeWidth="8" />
+    <svg aria-hidden width="40" height="18" viewBox="0 0 40 18" fill="none" className="shrink-0">
+      <path d="M2,9 C8,1 13,17 20,9 C27,1 32,17 38,9" stroke="#3A0A12" strokeWidth="3" strokeLinecap="round" />
     </svg>
   );
 }

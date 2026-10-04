@@ -84,9 +84,9 @@ Edit `lib/data.ts`: `CURRENCY` (default `₱`) and the `tiers` array (price, fea
 
 | Tier | Price | Color |
 | --- | --- | --- |
-| Tier 1, Basic | 1,500 | Green |
-| Tier 2, Premium | 3,000 | Orange |
-| Tier 3, Customized | 7,000+ | Purple |
+| Tier 1, Basic | 1,500 | Amber |
+| Tier 2, Premium | 3,000 | Red |
+| Tier 3, Customized | 7,000+ | Wine |
 
 ### Contact email
 
@@ -94,23 +94,27 @@ Edit `EMAIL` in `components/contact.tsx`. The form currently opens the visitor's
 
 ### About section
 
-Edit `components/about.tsx` and replace the photo placeholder with your photo.
+Edit `components/about.tsx`: replace the photo placeholder with your photo. It also explains the red string theory.
 
 ## Brand
 
-- Logo: two linked rings (ink and orange) with the "tali" wordmark. Component: `components/logo.tsx`
+Tali is based on the **red string of fate**, an East Asian legend about an invisible red string that ties two people who are meant to meet. The name means "string" or "tie" in Filipino.
+
+- Logo: a single red string tied into a "T", followed by "ali". The string is defined once in `lib/string.ts` (`STEM` and `BAR`). Component: `components/logo.tsx`
 - Favicon: `app/icon.svg`
-- Loading screen: draws an infinity symbol, then settles into the rings. Component: `components/loader.tsx`
+- Loading screen: the T is written stroke by stroke (stem, then bar), then "ali" wipes in. Component: `components/loader.tsx`
+- Other string details: hero background thread, scroll divider (`components/string-divider.tsx`), marquee threads, About background
 - Colors (in `app/globals.css`):
 
 | Name | Hex |
 | --- | --- |
-| Cream | `#FAF3E1` |
-| Sand | `#F5E7C6` |
-| Accent orange | `#FA8112` |
-| Ink | `#222222` |
+| Cream | `#FFFAF3` |
+| Sand | `#FFF2DB` |
+| Peach (borders) | `#FFE5BF` |
+| Red string (accent) | `#F62440` |
+| Ink (text, added to the palette) | `#3A0A12` |
 
-Palette: https://colorhunt.co/palette/faf3e1f5e7c6fa8112222222
+Palette: https://colorhunt.co/palette/fffaf3fff2dbffe5bff62440
 
 ## Project structure
 

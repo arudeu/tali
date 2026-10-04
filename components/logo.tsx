@@ -1,15 +1,18 @@
 "use client";
 import { motion } from "motion/react";
+import { BAR, STEM } from "@/lib/string";
 
-/** Tali mark: two linked rings (orange + ink) with the wordmark. */
-export function Logo({ size = 36 }: { size?: number }) {
+/** Tali logo: a red string written as a cursive "t" with a looped tail, followed by "ali". Hover to redraw the string. */
+export function Logo({ size = 34 }: { size?: number }) {
   return (
-    <motion.span className="inline-flex items-center gap-2" whileHover="hover">
-      <motion.svg width={size * 2} height={size} viewBox="0 0 120 60" fill="none" aria-hidden>
-        <motion.circle cx="46" cy="30" r="22" stroke="#222222" strokeWidth="6" variants={{ hover: { x: -4 } }} />
-        <motion.circle cx="74" cy="30" r="22" stroke="#FA8112" strokeWidth="6" variants={{ hover: { x: 4 } }} />
+    <motion.span role="img" aria-label="Tali" className="inline-flex items-center" whileHover="hover">
+      <motion.svg width={size} height={size} viewBox="0 0 100 100" fill="none" aria-hidden className="shrink-0 overflow-visible">
+        <motion.path d={STEM} stroke="#F62440" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round"
+          variants={{ hover: { pathLength: [1, 0, 1] } }} transition={{ duration: 0.8 }} />
+        <motion.path d={BAR} stroke="#F62440" strokeWidth="10" strokeLinecap="round"
+          variants={{ hover: { pathLength: [1, 0, 1] } }} transition={{ duration: 0.8, delay: 0.3 }} />
       </motion.svg>
-      <span className="text-2xl font-extrabold tracking-tight">tali</span>
+      <span aria-hidden className="-ml-0.5 font-extrabold tracking-tight" style={{ fontSize: size * 0.85 }}>ali</span>
     </motion.span>
   );
 }

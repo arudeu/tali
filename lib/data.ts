@@ -1,11 +1,11 @@
 export const CURRENCY = "₱"; // change to "$" if you price in USD
 
 export const tiers = [
-  { name: "Tier 1", title: "Basic", color: "#5E9C76", price: "1,500", note: "Ready-made basic templates",
+  { name: "Tier 1", title: "Basic", color: "#F2B26B", price: "1,500", note: "Ready-made basic templates",
     features: ["Pick from basic templates", "Names, date and venue", "RSVP form", "Mobile-friendly page"] },
-  { name: "Tier 2", title: "Premium", color: "#FA8112", price: "3,000", note: "Premium templates with extras", featured: true,
+  { name: "Tier 2", title: "Premium", color: "#F62440", price: "3,000", note: "Premium templates with extras", featured: true,
     features: ["Everything in Tier 1", "Premium animated templates", "Photo gallery and love story", "Music and countdown"] },
-  { name: "Tier 3", title: "Customized", color: "#8A3F78", price: "7,000+", note: "Designed around your wedding",
+  { name: "Tier 3", title: "Customized", color: "#6B1E3A", price: "7,000+", note: "Designed around your wedding",
     features: ["Everything in Tier 2", "Fully custom design", "Custom features and domain", "Direct support from the designer"] },
 ];
 

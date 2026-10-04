@@ -1,5 +1,5 @@
 import { Marquee } from "@/components/marquee";
-import { InfinityDivider } from "@/components/infinity-divider";
+import { StringDivider } from "@/components/string-divider";
 import { Hero } from "@/components/hero";
 import { Pricing } from "@/components/pricing";
 import { Projects } from "@/components/projects";
@@ -14,7 +14,7 @@ export default function Home() {
       <Pricing />
       <Projects />
       <About />
-      <InfinityDivider />
+      <StringDivider />
       <Contact />
     </>
   );
