@@ -1,12 +1,12 @@
 "use client";
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion } from "motion/react";
 import { Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Placeholder } from "@/components/placeholder";
+import { SkeletonImage } from "@/components/skeleton-image";
 import { VideoModal } from "@/components/video-modal";
 import { templates, tiers, type Template } from "@/lib/data";
 import { cn } from "@/lib/utils";
@@ -55,7 +55,7 @@ export default function TemplatesPage() {
                     <div className="group relative">
                       {available ? (
                         <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-sand">
-                          <Image src={t.image!} alt={`${t.name} template`} fill sizes="(min-width: 1024px) 33vw, 50vw"
+                          <SkeletonImage src={t.image!} alt={`${t.name} template`} fill sizes="(min-width: 1024px) 33vw, 50vw"
                             className="object-cover object-top transition-transform duration-500 group-hover:scale-105" />
                         </div>
                       ) : (

@@ -1,8 +1,8 @@
 "use client";
-import Image from "next/image";
 import { motion } from "motion/react";
 import { ExternalLink } from "lucide-react";
 import { Reveal } from "@/components/reveal";
+import { SkeletonImage } from "@/components/skeleton-image";
 import { projects } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
@@ -28,7 +28,7 @@ export function Projects() {
                   </div>
                   <div className={cn("relative overflow-hidden bg-sand", single ? "aspect-[16/10] sm:aspect-[2/1]" : "aspect-[16/10]")}>
                     {p.image && (
-                      <Image src={p.image} alt={`${p.name} wedding invitation website`} fill
+                      <SkeletonImage src={p.image} alt={`${p.name} wedding invitation website`} fill
                         sizes={single ? "(min-width: 1152px) 1100px, 100vw" : "(min-width: 640px) 50vw, 100vw"}
                         className="object-cover object-top transition-transform duration-700 group-hover:scale-105" />
                     )}

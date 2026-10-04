@@ -4,7 +4,7 @@ import { Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/reveal";
 
-const EMAIL = "devaldous@gmail.com"; // replace with your real email
+const EMAIL = "devaldous@gmail.com";
 
 const field =
   "w-full rounded-2xl border border-border bg-card px-4 py-3 text-sm outline-none focus:border-accent";

@@ -1,9 +1,12 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { X } from "lucide-react";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export function VideoModal({ src, poster, title, onClose }: { src: string; poster?: string; title: string; onClose: () => void }) {
+  const [ready, setReady] = useState(false);
+
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
     window.addEventListener("keydown", onKey);
@@ -26,7 +29,11 @@ export function VideoModal({ src, poster, title, onClose }: { src: string; poste
           className="absolute -top-12 right-0 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-cream text-ink hover:bg-accent">
           <X className="h-5 w-5" />
         </button>
-        <video src={src} poster={poster} controls autoPlay playsInline className="aspect-video w-full rounded-2xl bg-black" />
+        <div className="relative overflow-hidden rounded-2xl bg-black">
+          <video src={src} poster={poster} controls autoPlay playsInline onLoadedData={() => setReady(true)} onError={() => setReady(true)}
+            className="aspect-video w-full" />
+          {!ready && <Skeleton mark className="pointer-events-none absolute inset-0" />}
+        </div>
         <p className="mt-3 text-center text-sm font-semibold text-cream">{title}</p>
       </motion.div>
     </motion.div>
