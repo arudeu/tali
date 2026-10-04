@@ -16,7 +16,7 @@ export function Pricing() {
           <h2 className="text-4xl font-extrabold tracking-tight md:text-5xl">Pricing</h2>
           <p className="mt-3 max-w-lg text-muted-foreground">Pick a ready-made template, or have one designed just for you.</p>
         </Reveal>
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
           {tiers.map((t, i) => (
             <Reveal key={t.name} delay={i * 0.1}>
               <motion.div whileHover={{ y: -6 }} transition={{ type: "spring", stiffness: 300, damping: 20 }} className="h-full">
@@ -24,7 +24,7 @@ export function Pricing() {
                   <CardContent className="flex h-full flex-col p-8">
                     <p className="flex items-center gap-2 text-sm font-semibold"><span className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: t.color }} />{t.name}</p>
                     <h3 className="mt-1 text-2xl font-extrabold">{t.title}</h3>
-                    <p className="mt-6 text-5xl font-extrabold tracking-tight">
+                    <p className="mt-6 text-4xl font-extrabold tracking-tight sm:text-5xl">
                       {CURRENCY}{t.price}
                     </p>
                     <p className={cn("mt-2 text-sm", t.featured ? "text-cream/70" : "text-muted-foreground")}>{t.note}</p>

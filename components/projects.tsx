@@ -15,18 +15,18 @@ export function Projects() {
           <h2 className="text-4xl font-extrabold tracking-tight md:text-5xl">Projects</h2>
           <p className="mt-3 max-w-lg text-muted-foreground">Invitations built for real couples.</p>
         </Reveal>
-        <div className={cn("mt-12 grid gap-10", !single && "sm:grid-cols-2")}>
+        <div className={cn("mt-12 grid grid-cols-1 gap-10", !single && "sm:grid-cols-2")}>
           {projects.map((p, i) => {
             const body = (
               <>
-                <div className="overflow-hidden rounded-2xl border border-ink/80 bg-card shadow-[8px_8px_0_0_#FA8112] transition-shadow group-hover:shadow-[12px_12px_0_0_#FA8112]">
-                  <div className="flex items-center gap-1.5 border-b border-ink/80 bg-sand px-4 py-2.5" aria-hidden>
+                <div className="overflow-hidden rounded-2xl border border-ink/80 bg-card shadow-[5px_5px_0_0_#FA8112] transition-shadow sm:shadow-[8px_8px_0_0_#FA8112] sm:group-hover:shadow-[12px_12px_0_0_#FA8112]">
+                  <div className="flex min-w-0 items-center gap-1.5 border-b border-ink/80 bg-sand px-4 py-2.5" aria-hidden>
                     <span className="h-2.5 w-2.5 rounded-full bg-ink" />
                     <span className="h-2.5 w-2.5 rounded-full bg-accent" />
                     <span className="h-2.5 w-2.5 rounded-full bg-cream" />
-                    {p.href && <span className="ml-3 truncate rounded-full bg-cream px-3 py-0.5 text-xs">{p.href.replace(/^https?:\/\//, "")}</span>}
+                    {p.href && <span className="ml-3 min-w-0 flex-1 truncate rounded-full bg-cream px-3 py-0.5 text-xs">{p.href.replace(/^https?:\/\//, "")}</span>}
                   </div>
-                  <div className={cn("relative overflow-hidden bg-sand", single ? "aspect-[2/1]" : "aspect-[16/10]")}>
+                  <div className={cn("relative overflow-hidden bg-sand", single ? "aspect-[16/10] sm:aspect-[2/1]" : "aspect-[16/10]")}>
                     {p.image && (
                       <Image src={p.image} alt={`${p.name} wedding invitation website`} fill
                         sizes={single ? "(min-width: 1152px) 1100px, 100vw" : "(min-width: 640px) 50vw, 100vw"}
@@ -34,9 +34,9 @@ export function Projects() {
                     )}
                   </div>
                 </div>
-                <div className="mt-6 flex flex-wrap items-start justify-between gap-4">
-                  <div className="max-w-xl">
-                    <h3 className="flex items-center gap-2 text-2xl font-extrabold">
+                <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                  <div className="min-w-0 max-w-xl">
+                    <h3 className="flex items-center gap-2 text-xl font-extrabold sm:text-2xl">
                       {p.name}
                       {p.href && <ExternalLink className="h-5 w-5 text-accent transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" aria-hidden />}
                     </h3>
@@ -57,7 +57,7 @@ export function Projects() {
               </>
             );
             return (
-              <Reveal key={p.name} delay={(i % 2) * 0.1}>
+              <Reveal key={p.name} delay={(i % 2) * 0.1} className="min-w-0">
                 <article className="group">
                   {p.href ? (
                     <a href={p.href} target="_blank" rel="noopener noreferrer" className="block"

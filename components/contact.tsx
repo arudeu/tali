@@ -21,11 +21,11 @@ export function Contact() {
 
   return (
     <section id="contact" className="py-24">
-      <div className="mx-auto grid max-w-6xl gap-12 px-6 md:grid-cols-2">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 md:grid-cols-2">
         <Reveal>
           <h2 className="text-4xl font-extrabold tracking-tight md:text-5xl">Contact</h2>
           <p className="mt-4 max-w-md text-muted-foreground">Tell us your wedding date and the tier you like. We reply within a day.</p>
-          <p className="mt-8 flex items-center gap-2 font-semibold"><Mail className="h-5 w-5 text-accent" />{EMAIL}</p>
+          <p className="mt-8 flex items-center gap-2 break-all font-semibold"><Mail className="h-5 w-5 text-accent" />{EMAIL}</p>
         </Reveal>
         <Reveal delay={0.1}>
           <form onSubmit={onSubmit} className="space-y-4">

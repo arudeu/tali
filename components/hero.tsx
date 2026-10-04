@@ -9,9 +9,9 @@ const words = "Wedding invitations that feel like your story.".split(" ");
 export function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <div className="relative mx-auto grid max-w-6xl items-center gap-16 px-6 pb-28 pt-20 md:grid-cols-[1.2fr_1fr] md:pt-28">
+      <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-16 px-6 pb-20 pt-14 md:grid-cols-[1.2fr_1fr] md:pb-28 md:pt-28">
         <div>
-          <h1 className="text-5xl font-extrabold leading-[1.05] tracking-tight md:text-7xl">
+          <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl md:text-7xl">
             {words.map((w, i) => (
               <motion.span key={i} className="mr-[0.25em] inline-block"
                 initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}
