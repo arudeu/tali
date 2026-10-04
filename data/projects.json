@@ -1,0 +1,9 @@
+[
+  {
+    "name": "Joaquin and Krisna",
+    "detail": "A wedding invitation site for a Batangas City celebration, with RSVP, family details, gift info, a map and background music.",
+    "image": "/projects/joaquin-krisna.png",
+    "href": "https://joaquin-krisna-wedding-invitation.vercel.app/",
+    "tags": ["RSVP", "Map", "Gifts", "Music"]
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "slug": "burgundy-seal",
+    "name": "Burgundy Seal",
+    "tier": 2,
+    "image": "/templates/burgundy-seal.jpg",
+    "videoUrl": "/templates/burgundy-seal.mp4",
+    "previewUrl": ""
+  },
+  {
+    "slug": "blush-garden",
+    "name": "Blush Garden",
+    "tier": 1,
+    "image": "",
+    "previewUrl": "",
+    "videoUrl": ""
+  },
+  {
+    "slug": "sunday-linen",
+    "name": "Sunday Linen",
+    "tier": 1,
+    "image": "",
+    "previewUrl": "",
+    "videoUrl": ""
+  },
+  {
+    "slug": "plain-vows",
+    "name": "Plain Vows",
+    "tier": 1,
+    "image": "",
+    "previewUrl": "",
+    "videoUrl": ""
+  },
+  {
+    "slug": "sampaguita",
+    "name": "Sampaguita",
+    "tier": 1,
+    "image": "",
+    "previewUrl": "",
+    "videoUrl": ""
+  },
+  {
+    "slug": "golden-hour",
+    "name": "Golden Hour",
+    "tier": 2,
+    "image": "",
+    "previewUrl": "",
+    "videoUrl": ""
+  },
+  {
+    "slug": "evergreen",
+    "name": "Evergreen",
+    "tier": 2,
+    "image": "",
+    "previewUrl": "",
+    "videoUrl": ""
+  },
+  {
+    "slug": "midnight-waltz",
+    "name": "Midnight Waltz",
+    "tier": 2,
+    "image": "",
+    "previewUrl": "",
+    "videoUrl": ""
+  },
+  {
+    "slug": "barong-classic",
+    "name": "Barong Classic",
+    "tier": 2,
+    "image": "",
+    "previewUrl": "",
+    "videoUrl": ""
+  },
+  {
+    "slug": "your-story",
+    "name": "Your Story",
+    "tier": 3,
+    "image": "",
+    "previewUrl": "",
+    "videoUrl": ""
+  }
+]
